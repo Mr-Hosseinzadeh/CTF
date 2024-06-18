@@ -1,0 +1,8 @@
+**/.venv/
+**/.vscode/
+**/__pycache__
+**/db.sqlite3
+**/venv
+**/.env
+**/*.o
+**/.gdb_history

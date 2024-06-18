@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انتخاب ارز</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: 'Shabnam', Arial, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    width: 100px;
+    height: 50px;
+}
+
+
+
+</style>
+<body>
+
+       <div>
+         <input type="button" value="send" onclick="sendRequest()"/>
+         <div>
+        <br>
+        <br>
+        <div>
+            <pre id="result"></pre>
+        </div>
+        
+</body>
+
+<script>
+function sendRequest(){
+
+    var body = "http://ip.me"
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", 'myip/', true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function() {
+            document.getElementById("result").innerText="ip: "+xhr.responseText
+    };
+    xhr.onerror = function() {
+        console.error('Request error');
+    };
+    xhr.send("url="+body);
+}
+
+</script>
+</html>

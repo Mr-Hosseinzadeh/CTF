@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    {% if success %}
+    <h1>Success</h1>
+    <br>
+    <h2>
+        Username: {{ name }}
+        
+    </h2>
+    <h3>Flag:  {{ flag }}</h3>
+    {% else %}
+    <h1>ERROR</h1>
+    <h2>{{ name }}</h2>
+    <a href="/ ">Return to Home</a>
+    {% endif %}
+</body>
+</html>
